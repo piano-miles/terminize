@@ -1,5 +1,7 @@
 # Terminize
 
+## Description
+
 A study tool designed to help students learn and recall information by practicing term-definition pairs in various categories. It is an interactive and customizable tool that allows students to choose the difficulty level and track their progress over time.
 
 ## Actuality
