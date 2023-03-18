@@ -1,5 +1,7 @@
 # Terminize
 
+(Visit [here](https://piano-miles.github.io/terminize/))
+
 ## Description
 
 Terminize is a study tool designed to help students learn and recall information by practicing term-definition pairs in various categories. It is an interactive and customizable tool that allows students to choose the difficulty level and track their progress over time.
