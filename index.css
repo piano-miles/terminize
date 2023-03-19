@@ -2,7 +2,7 @@
 
 body {
     background-color: #2a3140;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
 .perspective {
@@ -38,8 +38,7 @@ body {
 
 .text {
     margin: auto;
-    text-align: center;
-    color: #ffffff;
+    color: #fff;
     padding: 30px;
     width: 482;
     height: 226;
@@ -60,7 +59,7 @@ body {
     user-select: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width:600px) {
     body {
         zoom: .5;
         -moz-transform: scale(.5);
