@@ -2,7 +2,7 @@ var state = false;
 var term = document.getElementById('term');
 var termW = document.getElementById('termWindow');
 var def = document.getElementById('definition');
-var defW = doocument.getElementById('defWindow');
+var defW = document.getElementById('defWindow');
 var x = 0;
 console.log(x);
 
@@ -27,37 +27,39 @@ function left() {
 
 function update() {
     console.log(x);
-    if (x == 0) {
+    if (x == 0) { // Active card
         term.style.transform = `rotateX(${state * 180}deg)`;
         def.style.transform = `rotateX(${!state * -180}deg)`;
         console.log("rotatex");
-    } else {
-        //term.style.transform = `rotateY(${x * -0.05}deg)`;
-        //def.style.transform = `rotateY(${x * -0.05}deg)`;
+        term.style.opacity = !state * 100;
+        def.style.opacity = state * 100;
+    } else { // Inactive card
+        if (state) state = !state;
+        term.style.transform = `rotateY(${x * -0.1}deg)`;
+        def.style.transform = `rotateY(${x * -0.1}deg)`;
+        term.style.opacity = Math.max(1 - x * 0.0012, 0) * 0.7;
+        def.style.opacity = 0;
     }
-    term.style.opacity = !state * 100;
-    def.style.opacity = state * 100;
-    //termW.style.transform = `translateX(${x}px)`;
-    //defW.style.transform = `translateX(${x}px)`;
+    termW.style.transform = `translateX(${x}px)`;
+    defW.style.transform = `translateX(${x}px)`;
 }
 
-document.addEventListener('keyup', event => {
-    if (event.code === 'Space') flip()
-})
-
-document.onkeydown = function (event) {
-    switch (event.keyCode) {
-        case 37:
+document.addEventListener('keyup', e => {
+    switch (e.key) {
+        case "ArrowLeft":
             left();
             break;
-        case 39:
+        case "ArrowRight":
             right();
             break;
-        case 38:
-            // up
+        case "ArrowUp":
+            flip();
             break;
-        case 40:
-            // down
+        case "ArrowDown":
+            flip();
+            break;
+        case " ":
+            flip();
             break;
     }
-};
+});
