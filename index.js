@@ -15,13 +15,13 @@ function flip() {
 
 function right() {
     console.log('right');
-    x += 170;
+    x += 256;
     update()
 }
 
 function left() {
     console.log('left');
-    x -= 170;
+    x -= 256;
     update()
 }
 
@@ -37,7 +37,7 @@ function update() {
         if (state) state = !state;
         term.style.transform = `rotateY(${x * -0.1}deg)`;
         def.style.transform = `rotateY(${x * -0.1}deg)`;
-        term.style.opacity = Math.max(1 - x * 0.0012, 0) * 0.7;
+        term.style.opacity = Math.max(1 - Math.abs(x) * 0.0012, 0) * 0.7;
         def.style.opacity = 0;
     }
     termW.style.transform = `translateX(${x}px)`;
