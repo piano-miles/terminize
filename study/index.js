@@ -10,7 +10,9 @@ var defW = [];
 var xp = [];
 var ID = [];
 
-const studyset = sessionStorage.getItem("studyset");
+const studyset = sessionStorage.getItem("studyset").split('\n').map(_ => _.split('\t'));
+// for (A of studyset) console.log(A);
+// console.log(`Length: ${studyset.length}`);
 
 createCard = (T, D, _) => `<div class="perspective" id="defWindow0"> <div class="animated" id="definition0"> <p class="definition text noselect">${D}</p></div></div><div class="perspective" id="termWindow0"> <div class="animated" id="term0" onclick="flip()"> <p class="term text noselect">${T}</p></div></div>`.replaceAll(0, _);
 
@@ -19,6 +21,7 @@ cardHolder.id = 'ch1';
 cardHolder.innerHTML = "";
 
 for (let i = 0; i < studyset.length; i++) {
+    console.log(`Pair ${i}: ${studyset[i]}`);
     cardHolder.innerHTML += createCard(studyset[i][0], studyset[i][1], i);
     xp.push((i - 2) * xoff);
     ID.push(i);
@@ -33,25 +36,25 @@ for (let i of ID) {
     defW.push(document.getElementById('defWindow' + i));
 }
 
-function flip(id) {
+flip = (_) => {
     state = !state;
-    xp[id] = 0;
-    update(id);
+    xp[_] = 0;
+    update(_);
 }
 
-function right(id) {
-    xp[id] -= xoff;
-    update(id);
+right = (_) => {
+    xp[_] -= xoff;
+    update(_);
 }
 
-function left(id) {
-    xp[id] += xoff;
-    update(id);
+left = (_) => {
+    xp[_] += xoff;
+    update(_);
 }
 
 function update(id) {
-    termW[id].style.zIndex = cards - Math.abs(xp[id] / xoff);
-    defW[id].style.zIndex = cards - Math.abs(xp[id] / xoff);
+    termW[id].style.zIndex = studyset.length - Math.abs(xp[id] / xoff);
+    defW[id].style.zIndex = studyset.length - Math.abs(xp[id] / xoff);
 
     if (Math.abs(xp[id]) > xoff * 2.5) {
         termW[id].style.display = "none";

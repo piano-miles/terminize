@@ -1,3 +1,7 @@
+//
+// Depreciated
+//
+
 console.log("start");
 
 var state = false;
