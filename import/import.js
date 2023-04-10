@@ -12,7 +12,7 @@ function validate(S) {
         sessionStorage.setItem("studyset", studyset);
         document.write(`Your set with ${S.length} terms has been validated. You will be redirected shortly.`);
         // logset(S);
-        setTimeout(() => window.location.replace("../study"), 5000);
+        setTimeout(() => window.location.replace("../study"), 2000);
     }
 }
 
