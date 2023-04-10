@@ -1,4 +1,7 @@
 .DS_Store
 .env
 .vscode
+.hintrc
+package.json
+package-lock.json
 node_modules
