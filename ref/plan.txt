@@ -1,0 +1,3 @@
+ - Add support for more filetypes
+ - Choosing delimiters on import page
+ - Main page has link to import page
