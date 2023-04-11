@@ -6,7 +6,7 @@ body {
     font-family: "Inter", sans-serif;
     width: 100%;
     margin: 0;
-    overflow-x: hidden;
+    overflow-x: hidden
 }
 
 .perspective {
@@ -20,7 +20,7 @@ body {
     width: 512px;
     height: 256px;
     margin: 16px;
-    transition-duration: 150ms;
+    transition-duration: 150ms
 }
 
 .animated {
@@ -32,12 +32,12 @@ body {
     transition-duration: 250ms;
     position: static;
     cursor: pointer;
-    opacity: 100;
+    opacity: 100
 }
 
 #definition {
     transform: rotateX(-180deg);
-    opacity: 0;
+    opacity: 0
 }
 
 .text {
@@ -47,11 +47,11 @@ body {
     width: 482;
     height: 226;
     font-size: 20px;
-    text-align: center;
+    text-align: center
 }
 
 .term {
-    font-size: 35px;
+    font-size: 35px
 }
 
 .noselect {
@@ -60,13 +60,15 @@ body {
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;
+    user-select: none
 }
 
 @media only screen and (max-width:600px) {
     body {
         zoom: .5;
         -moz-transform: scale(.5);
-        -moz-transform-origin: 0 0
+        -moz-transform-origin: 0 0;
+        transform: scale(.5);
+        transform-origin: 0 0
     }
 }
