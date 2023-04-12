@@ -3,9 +3,14 @@
 ## Major
 
 - Multiple choice study method
+- GPT integration
 
 ## Minor
 
+### Immidiate
+- Make table update with terms and definitions on main page
+
+### Long-term
 - Add support for more filetypes
 - Choosing delimiters on `import` page
 - Script to list and import example study sets
@@ -16,4 +21,4 @@
 
 ## Bugs
 
-- Broken `terminize` --> `terminize/import` link on deployed page
+No bugs as of current.
