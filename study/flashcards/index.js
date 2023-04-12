@@ -1,12 +1,11 @@
-var state = false;
-var xoff = 300;
-
-var term = [];
-var termW = [];
-var def = [];
-var defW = [];
-var xp = [];
-var ID = [];
+var state = !1,
+    xoff = 300,
+    term = [],
+    termW = [],
+    def = [],
+    defW = [],
+    xp = [],
+    ID = [];
 
 const studyset = sessionStorage.getItem("studyset").split('\n').map(_ => _.split('\t'));
 

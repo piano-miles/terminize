@@ -45,3 +45,21 @@ button:hover {
 h1 {
     color: #fff
 }
+
+#readme {
+    width: 80%;
+    min-width: 400px
+}
+
+.link {
+    color: #abd3ed;
+    font-weight: 500;
+    font-size: 15px
+}
+
+#mainbreak {
+    width: 80%;
+    border-color: #dcdcdc;
+    margin-top: 64px;
+    margin-bottom: 64px
+}
