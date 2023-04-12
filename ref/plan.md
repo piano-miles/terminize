@@ -9,7 +9,7 @@
 
 ### Immidiate
 
-- Make table update with terms and definitions on main page
+Nothing immidiate :D
 
 ### Long-term
 

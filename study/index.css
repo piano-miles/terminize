@@ -6,7 +6,6 @@ html {
     font-family: "Inter", sans-serif;
     color: #dcdcdc;
     width: 100%;
-    padding-top: 8px;
     margin: 0
 }
 
@@ -38,6 +37,7 @@ table {
     border-radius: 8px
 }
 
+.mainbutton,
 button {
     width: 128px;
     height: 64px;
@@ -47,6 +47,7 @@ button {
     transition-duration: 100ms
 }
 
+.mainbutton:hover,
 button:hover {
     border: 2px solid #abd3ed;
     background-color: #474a4e
@@ -58,9 +59,43 @@ h1 {
 
 td,
 th {
-    padding: 12px
+    padding: 12px;
+    transition-duration: 150ms
 }
 
 table {
     padding: 4px
+}
+
+td:hover {
+    border: 1px solid #84ada7;
+    background-color: #313337
+}
+
+th {
+    pointer-events: none
+}
+
+.mainbutton {
+    width: 64px;
+    height: 32px;
+    border: 2px solid #667667;
+    background-color: #383a3c;
+    border-radius: 8px;
+    font-size: 14px
+}
+
+.main {
+    padding: 16px;
+    width: 100%;
+    transition-duration: 250ms;
+    margin-bottom: 8px
+}
+
+.main:hover {
+    background-color: #4a4949
+}
+
+.maintext {
+    margin-top: 5px
 }

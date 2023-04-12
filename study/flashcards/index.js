@@ -1,5 +1,3 @@
-console.log("start");
-
 var state = false;
 var xoff = 300;
 
@@ -11,16 +9,13 @@ var xp = [];
 var ID = [];
 
 const studyset = sessionStorage.getItem("studyset").split('\n').map(_ => _.split('\t'));
-// for (A of studyset) console.log(A);
-// console.log(`Length: ${studyset.length}`);
 
 createCard = (T, D, _) => `<div class="perspective" id="defWindow0"> <div class="animated" id="definition0"> <p class="definition text noselect">${D}</p></div></div><div class="perspective" id="termWindow0"> <div class="animated" id="term0" onclick="flip()"> <p class="term text noselect">${T}</p></div></div>`.replaceAll(0, _);
 
 var cardHolder = document.createElement("div");
 cardHolder.id = "ch1", cardHolder.innerHTML = "";
 
-for (const i = 0; i < studyset.length; i++) {
-    console.log(`Pair ${i}: ${studyset[i]}`);
+for (let i = 0; i < studyset.length; i++) {
     cardHolder.innerHTML += createCard(studyset[i][0], studyset[i][1], i);
     xp.push((i - 2) * xoff);
     ID.push(i);
@@ -72,7 +67,7 @@ function update(t) {
             )
         );
 
-    let e = xp[t], // Continuous card tilt
+    const e = xp[t], // Continuous card tilt
         s = 0 ^ xp[t] ? -500 : 0; // Forward when focused, back when not
 
     termW[t].style.transform = `translateX(${e}px)`,

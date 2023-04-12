@@ -1,10 +1,20 @@
-const studyset = sessionStorage.getItem("studyset").split('\n').map(_ => _.split('\t'));
+const studyset = sessionStorage.getItem("studyset").split("\n").map(_ => _.split("\t"));
 
-let table = document.getElementById("table");
+var table = document.getElementById("table");
+var rows = [], cells = [];
 
-/*
+for (let i = 0; i < studyset.length; i++) {
+    rows.push(table.insertRow(i + 1));
 
-for (const i of studyset)
-    table.addRow(i, studyset[i][0], studyset[i][1]) // Add set to table
+    cells.push([
+        rows[i].insertCell(0),
+        rows[i].insertCell(1),
+        rows[i].insertCell(2)
+    ]);
+}
 
-*/
+for (let i = 0; i < cells.length; i++) {
+    cells[i][0].innerHTML = i + 1;
+    cells[i][1].innerHTML = studyset[i][0];
+    cells[i][2].innerHTML = studyset[i][1];
+}

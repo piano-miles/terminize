@@ -16,11 +16,18 @@
 </head>
 
 <body>
+    <div class="main">
+        <button title="exit" id="exit" class="mainbutton" onclick="location.href = '../';">
+            <p class="maintext">exit</p>
+        </button>
+    </div>
+
     <div class="content">
         <h1>Terminize</h1>
         <div id="description">
             <p>Select a mode of learning below.</p>
         </div>
+
         <div id="buttons">
             <button title="flashcards" id="flashcards" onclick="location.href = './flashcards';">
                 <p>Flashcards</p>
@@ -32,32 +39,14 @@
                 <p>[placeholder]</p>
             </button>
         </div>
+
         <hr>
+
         <table id="table">
             <tr>
                 <th>#</th>
                 <th>Term</th>
                 <th>Definition</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Coffee</td>
-                <td>Warm, dark, hot (sometimes) drink</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Tea</td>
-                <td>Another drink</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Milk</td>
-                <td>White drink</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Water</td>
-                <td>Simple, transparent drink, and a common foundation for other drinks.</td>
             </tr>
         </table>
     </div>
