@@ -1,13 +1,13 @@
-@import url("//fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import "//fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap";
 
-html,
-body {
+body,
+html {
     background-color: #2a3140;
     font-family: "Inter", sans-serif;
     color: #dcdcdc;
     width: 100%;
     padding-top: 32px;
-    text-align: center;
+    text-align: center
 }
 
 .content {
@@ -15,12 +15,12 @@ body {
     margin: auto;
     width: 400px;
     border: 2px solid #ffffffad;
-    border-radius: 16px;
+    border-radius: 16px
 }
 
 input {
     width: 100%;
-    margin: 4px;
+    margin: 4px
 }
 
 #submit {
@@ -31,26 +31,26 @@ input {
     color: #efefef;
     font-size: 16px;
     cursor: pointer;
-    transition-duration: 100ms;
+    transition-duration: 100ms
 }
 
 #submit:hover {
     border: 2px solid #abd3ed;
-    background-color: #474a4e;
+    background-color: #474a4e
 }
 
 #import {
     width: 300px;
     margin: auto;
-    padding: 12px;
+    padding: 12px
 }
 
 h1 {
-    margin: 0px;
-    color: #fff;
+    margin: 0;
+    color: #fff
 }
 
 p {
     margin-top: 4px;
-    margin-bottom: 24px;
+    margin-bottom: 24px
 }

@@ -1,3 +1,3 @@
 # Study
 
-The main page with the terms. Will include a "flashcard" subcategory in the future.
+The main page with the imported study set. Includes subdirectories for various studying methods.
