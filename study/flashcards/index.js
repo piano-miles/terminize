@@ -19,7 +19,7 @@ createCard = (T, D, _) => `<div class="perspective" id="defWindow0"> <div class=
 var cardHolder = document.createElement("div");
 cardHolder.id = "ch1", cardHolder.innerHTML = "";
 
-for (let i = 0; i < studyset.length; i++) {
+for (const i = 0; i < studyset.length; i++) {
     console.log(`Pair ${i}: ${studyset[i]}`);
     cardHolder.innerHTML += createCard(studyset[i][0], studyset[i][1], i);
     xp.push((i - 2) * xoff);
@@ -28,7 +28,7 @@ for (let i = 0; i < studyset.length; i++) {
 
 document.body.appendChild(cardHolder);
 
-for (let i of ID) {
+for (const i of ID) {
     term.push(document.getElementById("term" + i));
     termW.push(document.getElementById("termWindow" + i));
     def.push(document.getElementById("definition" + i));
