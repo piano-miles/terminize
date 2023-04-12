@@ -15,7 +15,9 @@ For now, it will serve simply as a concept and a little passion project, and I m
 ## Useful files to the user
 
 `/example-sets/`
+
 - Some downloadable study sets. You can download one of these sets yourself and upload the file to import it on the actual Terminize website.
 
 `/ref/plan.md`
+
 - My future plans / todo list for this project, if you would like to see what is coming for the future.
