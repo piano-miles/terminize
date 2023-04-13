@@ -9,7 +9,7 @@
 
 ### Immidiate
 
-Nothing immidiate :D
+- Create a 'help' page detailing the study format and how to use the site
 
 ### Long-term
 
@@ -23,4 +23,4 @@ Nothing immidiate :D
 
 ## Bugs
 
-No bugs as of current.
+- The animation is odd when the focused card is left on the definition flip state while the user switches to a new card.
