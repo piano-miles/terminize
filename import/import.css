@@ -6,7 +6,6 @@ html {
     font-family: "Inter", sans-serif;
     color: #dcdcdc;
     width: 100%;
-    padding-top: 32px;
     text-align: center
 }
 
@@ -23,7 +22,8 @@ input {
     margin: 4px
 }
 
-#submit {
+#submit,
+button {
     height: 48px;
     border: 2px solid #667667;
     background-color: #383a3c;
@@ -34,7 +34,8 @@ input {
     transition-duration: 100ms
 }
 
-#submit:hover {
+#submit:hover,
+button:hover {
     border: 2px solid #abd3ed;
     background-color: #474a4e
 }
@@ -53,4 +54,20 @@ h1 {
 p {
     margin-top: 4px;
     margin-bottom: 24px
+}
+
+button {
+    width: 64px;
+    height: 32px;
+    font-size: 14px
+}
+
+.buttons {
+    padding: 16px;
+    width: 64px;
+    transition-duration: 250ms
+}
+
+.buttons:hover {
+    padding-left: 18px
 }

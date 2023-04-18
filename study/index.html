@@ -32,10 +32,12 @@
             <button title="flashcards" id="flashcards" onclick="location.href = './flashcards';">
                 <p>Flashcards</p>
             </button>
-            <button title="quiz" id="quiz" onclick="location.href = '';">
+            <button title="quiz" id="quiz"
+                onclick="document.write('You have found a learning mode that has not yet been developed.\nThis learning mode will, in the future, be a multiple-choice quiz that tracks the term/definition pairs that you most struggle with.');setTimeout(() => location.reload(), 1e4);">
                 <p>[placeholder]</p>
             </button>
-            <button title="third" id="third" onclick="location.href = '';">
+            <button title="third" id="third"
+                onclick="document.write('I would like to make the third learning mode utilize the GPT API somehow. As it stands, I will likely not begin development on this third learning mode until the second learning mode is complete.\nSee /ref/plan.md for more details regarding my idea for incorperating a personalized AI tutor.');setTimeout(() => location.reload(), 1e4);">
                 <p>[placeholder]</p>
             </button>
         </div>

@@ -33,18 +33,20 @@ hr {
 button,
 table {
     border: 2px solid #667667;
-    background-color: #383a3c;
     border-radius: 8px
 }
 
 .mainbutton,
 button {
-    width: 128px;
-    height: 64px;
     color: #efefef;
-    font-size: 16px;
     cursor: pointer;
     transition-duration: 100ms
+}
+
+button {
+    width: 128px;
+    height: 64px;
+    font-size: 16px
 }
 
 .mainbutton:hover,
@@ -57,14 +59,29 @@ h1 {
     color: #fff
 }
 
+.mainbutton,
+button,
 td,
 th {
-    padding: 12px;
+    background-color: #383a3c
+}
+
+td,
+th {
     transition-duration: 150ms
 }
 
+td {
+    padding: 12px
+}
+
+th {
+    pointer-events: none
+}
+
 table {
-    padding: 4px
+    padding: 4px;
+    background-color: #26282b
 }
 
 td:hover {
@@ -72,21 +89,20 @@ td:hover {
     background-color: #313337
 }
 
-th {
-    pointer-events: none
-}
-
 .mainbutton {
     width: 64px;
     height: 32px;
     border: 2px solid #667667;
-    background-color: #383a3c;
     border-radius: 8px;
     font-size: 14px
 }
 
+.main,
+th {
+    padding: 16px
+}
+
 .main {
-    padding: 16px;
     width: 100%;
     transition-duration: 250ms;
     margin-bottom: 8px
@@ -98,4 +114,8 @@ th {
 
 .maintext {
     margin-top: 5px
+}
+
+.num {
+    text-align: center
 }

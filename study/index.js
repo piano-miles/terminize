@@ -14,7 +14,7 @@ for (let i = 0; i < studyset.length; i++) {
 }
 
 for (let i = 0; i < cells.length; i++) {
-    cells[i][0].innerHTML = i + 1;
+    cells[i][0].innerHTML = `<p class="num">${i + 1}</p>`;
     cells[i][1].innerHTML = studyset[i][0];
     cells[i][2].innerHTML = studyset[i][1];
 }
