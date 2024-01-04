@@ -6,7 +6,7 @@ html {
     font-family: "Inter", sans-serif;
     color: #dcdcdc;
     width: 100%;
-    text-align: center
+    text-align: center;
 }
 
 .content {
@@ -14,12 +14,12 @@ html {
     margin: auto;
     width: 400px;
     border: 2px solid #ffffffad;
-    border-radius: 16px
+    border-radius: 16px;
 }
 
 input {
     width: 100%;
-    margin: 4px
+    margin: 4px;
 }
 
 #submit,
@@ -31,43 +31,50 @@ button {
     color: #efefef;
     font-size: 16px;
     cursor: pointer;
-    transition-duration: 100ms
-}
-
-#submit:hover,
-button:hover {
-    border: 2px solid #abd3ed;
-    background-color: #474a4e
-}
-
-#import {
-    width: 300px;
-    margin: auto;
-    padding: 12px
-}
-
-h1 {
-    margin: 0;
-    color: #fff
-}
-
-p {
-    margin-top: 4px;
-    margin-bottom: 24px
+    transition-duration: 100ms;
 }
 
 button {
     width: 64px;
     height: 32px;
-    font-size: 14px
+    font-size: 14px;
+}
+
+#submit:hover,
+button:hover {
+    border: 2px solid #abd3ed;
+    background-color: #474a4e;
+}
+
+#import {
+    width: 300px;
+    margin: auto;
+    padding: 12px;
+}
+
+h1 {
+    margin: 0;
+    color: #fff;
+}
+
+p {
+    margin-top: 4px;
+    margin-bottom: 24px;
 }
 
 .buttons {
     padding: 16px;
     width: 64px;
-    transition-duration: 250ms
+    transition-duration: 250ms;
 }
 
 .buttons:hover {
-    padding-left: 18px
+    padding-left: 18px;
+}
+
+#validation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 32px;
 }

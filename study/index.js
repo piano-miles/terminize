@@ -1,9 +1,9 @@
-const studyset = sessionStorage.getItem("studyset").split("\n").map(_ => _.split("\t"));
+const study_set = sessionStorage.getItem("study_set").split("\n").map(_ => _.split("\t"));
 
-var table = document.getElementById("table");
-var rows = [], cells = [];
+let table = document.getElementById("table");
+let rows = [], cells = [];
 
-for (let i = 0; i < studyset.length; i++) {
+for (let i = 0; i < study_set.length; i++) {
     rows.push(table.insertRow(i + 1));
 
     cells.push([
@@ -15,6 +15,6 @@ for (let i = 0; i < studyset.length; i++) {
 
 for (let i = 0; i < cells.length; i++) {
     cells[i][0].innerHTML = `<p class="num">${i + 1}</p>`;
-    cells[i][1].innerHTML = studyset[i][0];
-    cells[i][2].innerHTML = studyset[i][1];
+    cells[i][1].innerHTML = study_set[i][0];
+    cells[i][2].innerHTML = study_set[i][1];
 }

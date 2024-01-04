@@ -7,15 +7,15 @@ var state = !1,
     xp = [],
     ID = [];
 
-const studyset = sessionStorage.getItem("studyset").split('\n').map(_ => _.split('\t'));
+const study_set = sessionStorage.getItem("study_set").split('\n').map(_ => _.split('\t'));
 
 createCard = (T, D, _) => `<div class="perspective" id="defWindow0"> <div class="animated" id="definition0"> <p class="definition text noselect">${D}</p></div></div><div class="perspective" id="termWindow0"> <div class="animated" id="term0" onclick="flip()"> <p class="term text noselect">${T}</p></div></div>`.replaceAll(0, _);
 
-var cardHolder = document.createElement("div");
+let cardHolder = document.createElement("div");
 cardHolder.id = "ch1", cardHolder.innerHTML = "";
 
-for (let i = 0; i < studyset.length; i++) {
-    cardHolder.innerHTML += createCard(studyset[i][0], studyset[i][1], i);
+for (let i = 0; i < study_set.length; i++) {
+    cardHolder.innerHTML += createCard(study_set[i][0], study_set[i][1], i);
     xp.push((i - 2) * xoff);
     ID.push(i);
 }
@@ -45,14 +45,14 @@ left = $ => {
 };
 
 function update(t) {
-    termW[t].style.zIndex = studyset.length - Math.abs(xp[t] / xoff);
-    defW[t].style.zIndex = studyset.length - Math.abs(xp[t] / xoff);
+    termW[t].style.zIndex = study_set.length - Math.abs(xp[t] / xoff);
+    defW[t].style.zIndex = study_set.length - Math.abs(xp[t] / xoff);
 
     Math.abs(xp[t]) > 2.5 * xoff ?
         termW[t].style.display = "none" : (
             termW[t].style.display = "block",
 
-            0 == xp[t] ? ( // Active card
+            xp[t] == 0 ? ( // Active card
                 term[t].style.transform = `rotateX(${180 * state}deg)`,
                 def[t].style.transform = `rotateX(${-180 * !state}deg)`,
                 term[t].style.opacity = 100 * !state,
@@ -79,15 +79,19 @@ for (i of
     (document.addEventListener("keyup", r => {
         switch (r.key) {
             case "ArrowLeft":
-                if (0 > xp[0]) for (i of ID) left(i)
+                if (xp[0] < 0) {
+                    for (i of ID) left(i)
+                }
                 break;
             case "ArrowRight":
-                if (0 < xp.slice(-1)) for (i of ID) right(i);
+                if (xp.slice(-1) > 0) {
+                    for (i of ID) right(i);
+                }
                 break;
             case "ArrowUp":
             case "ArrowDown":
             case " ":
-                for (i of ID) 0 === xp[i] && flip(i)
+                for (i of ID) xp[i] === 0 && flip(i)
         }
     }), ID)
 ) update(i);

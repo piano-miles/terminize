@@ -1,3 +1,3 @@
 # Sets
 
-Some sample studysets for testing purposes.
+Some sample study sets for testing purposes.
